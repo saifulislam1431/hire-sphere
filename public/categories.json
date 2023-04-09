@@ -1,0 +1,23 @@
+ [
+    {
+      "category_logo": "./assets/Icons/web-programming.png",
+      "category_name": "Web Development",
+      "jobs_available": 8
+    },
+    {
+      "category_logo": "./assets/Icons/data-science.png",
+      "category_name": "Data Science",
+      "jobs_available": 5
+    },
+    {
+      "category_logo": "./assets/Icons/engineering.png",
+      "category_name": "Software Engineering",
+      "jobs_available": 12
+    },
+    {
+      "category_logo": "./assets/Icons/social-media-marketing.png",
+      "category_name": "Digital Marketing",
+      "jobs_available": 6
+    }
+  ]
+
