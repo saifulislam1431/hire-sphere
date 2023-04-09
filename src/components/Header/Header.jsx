@@ -29,6 +29,11 @@ const Header = () => {
 
                         <NavLink to='/blog' className={({isActive})=> isActive ? 'active' : 'default'}>Blog</NavLink>
                     </li>
+                    <li className='mr-5 mb-3 lg:mb-0 ml-0 lg:ml-32'>
+
+                        <NavLink to='/apply'><button className='my-btn'>Start Applying</button></NavLink>
+                    </li>
+
 
                 </ul>
                 <button className='lg:hidden' onClick={()=>setOpen(!isOpen)}>
