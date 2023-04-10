@@ -3,8 +3,14 @@ import Lottie from 'lottie-react';
 import statistics from '../../../public/assets/99430-statistics.json'
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
 import axios from 'axios';
+import { useNavigation } from 'react-router-dom';
+import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 
 const Statistics = () => {
+    const loaderSpinner = useNavigation()
+    if(loaderSpinner.state === "loading"){
+        return <LoaderSpinner></LoaderSpinner>
+    }
     const [marks, setMarks] = useState([]);
     useEffect(() => {
         axios.get('data.json')

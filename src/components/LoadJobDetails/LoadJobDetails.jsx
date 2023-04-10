@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useNavigation, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation, faDollarSign, faPhone, faEnvelope, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import './LoadJobDetails.css';
 
 import Lottie from 'lottie-react';
 import heroImg from '../../../public/assets/78518-girl-doing-remote-job-using-laptop.json'
+import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 
 const LoadJobDetails = () => {
+    const loaderSpinner = useNavigation()
+    if(loaderSpinner.state === "loading"){
+        return <LoaderSpinner></LoaderSpinner>
+    }
     const id = useParams();
     const jobId = id.jobId;
     const data = useLoaderData();
@@ -61,6 +66,55 @@ const LoadJobDetails = () => {
                             <span className='font-extrabold text-neutral'>Experiences:</span>
                             <h1 className='font-medium text-accent mt-1'>{experiences}</h1>
                         </div>
+                    </div>
+
+                    <div>
+                        <div className='bg-primary bg-opacity-10 p-6 rounded-lg'>
+                            <div>
+                                <h1 className='text-neutral font-extrabold text-lg pb-2 border-b border-gray-400'>Job Details</h1>
+                                <div className='mt-4 inline-flex gap-2'>
+                                    <span className='text-primary'>
+                                        <FontAwesomeIcon icon={faDollarSign} />
+                                    </span>
+                                    <h1 className='font-bold'>Salary: <span className='text-accent font-semibold'>{salary} (per Month)</span></h1>
+                                </div>
+
+                                <div className='mt-4 inline-flex gap-2'>
+                                    <span className='text-primary'>
+                                        <FontAwesomeIcon icon={faBriefcase} />
+                                    </span>
+                                    <h1 className='font-bold'>Job Title : <span className='text-accent font-semibold'>{job_title} (per Month)</span></h1>
+                                </div>
+
+
+                            </div>
+
+                            <div>
+                                <h1 className='text-neutral font-extrabold text-lg pb-2 border-b border-gray-400 mt-6'>Contact Information</h1>
+                                <div className='mt-4 inline-flex gap-2'>
+                                    <span className='text-primary'>
+                                        <FontAwesomeIcon icon={faPhone} />
+                                    </span>
+                                    <h1 className='font-bold'>Phone: <span className='text-accent font-semibold'>{contact_information?.phone}</span></h1>
+                                </div>
+
+                                <div className='mt-4 inline-flex gap-2'>
+                                    <span className='text-primary'>
+                                        <FontAwesomeIcon icon={faEnvelope} />
+                                    </span>
+                                    <h1 className='font-bold'>Email: <span className='text-accent font-semibold'>{contact_information?.email}</span></h1>
+                                </div>
+
+                                <div className='mt-4 inline-flex gap-2 pb-3'>
+                                    <span className='text-primary'>
+                                        <FontAwesomeIcon icon={faLocation} />
+                                    </span>
+                                    <h1 className='font-bold'>Address: <span className='text-accent font-semibold'>{location}</span></h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button className='mt-3 lg:mt-5 bg-gradient-to-l from-primary to-secondary rounded-lg font-medium text-white w-full py-3'>Apply Now</button>
                     </div>
 
                 </div>

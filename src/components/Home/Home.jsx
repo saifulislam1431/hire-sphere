@@ -4,10 +4,15 @@ import Lottie from 'lottie-react';
 import heroImage from '../../../public/assets/75702-job-proposal-review-animation.json'
 import { data } from 'autoprefixer';
 import SingleCategory from '../SingleCategory/SingleCategory';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import SingleJob from '../SingleJob/SingleJob';
+import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 
 const Home = () => {
+    const loaderSpinner = useNavigation()
+    if(loaderSpinner.state === "loading"){
+        return <LoaderSpinner></LoaderSpinner>
+    }
 
     const allJobs = useLoaderData();
 

@@ -1,9 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation, faDollarSign } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigation } from 'react-router-dom';
+import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 
 const SingleJob = ({ job }) => {
+    const loaderSpinner = useNavigation()
+    if(loaderSpinner.state === "loading"){
+        return <LoaderSpinner></LoaderSpinner>
+    }
     // console.log(job);
     const { company_logo, company_name, job_title, full_time_or_part_time, remote_or_onsite, salary, location, id } = job;
     return (

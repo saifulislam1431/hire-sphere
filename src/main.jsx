@@ -9,6 +9,7 @@ import {
 import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import LoadJobDetails from './components/LoadJobDetails/LoadJobDetails';
+import LoaderSpinner from './components/LoaderSpinner/LoaderSpinner';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         element: <LoadJobDetails></LoadJobDetails>,
         loader: ()=> fetch('allJobs.json')
       },
+      // {
+      //   path: "blog",
+      //   element: <LoaderSpinner></LoaderSpinner>
+      // }
     ]
   },
 ]);
