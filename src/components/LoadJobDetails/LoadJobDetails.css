@@ -1,0 +1,12 @@
+.job-container{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+@media screen and (max-width:900px){
+
+    .job-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
