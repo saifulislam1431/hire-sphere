@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SingleCategory = ({singleCategory}) => {
-    console.log(singleCategory);
+    // console.log(singleCategory);
     const{category_logo,category_name,jobs_available}=singleCategory;
     return (
         <div className='bg-primary bg-opacity-10 my-5 p-8 rounded-xl'>

@@ -2,9 +2,9 @@
     {
       "id": "1",
       "job_title": "Software Developer",
-      "salary": "$80,000 - $100,000",
+      "salary": "80K - 100K",
       "company_name": "Microsoft.",
-      "company_logo": "./assets/logos/Microsoft.png",
+      "company_logo": "./assets/logos/Microsoft.jpg",
       "remote_or_onsite": "Remote",
       "full_time_or_part_time": "Full-time",
       "location": "San Francisco, CA",
@@ -20,7 +20,7 @@
     {
       "id": "2",
       "job_title": "Full-stack Developer",
-      "salary": "$90,000 - $110,000",
+      "salary": "90K - 110K",
       "company_name": "Google",
       "company_logo": "./assets/logos/google-1-1 1.png",
       "remote_or_onsite": "Onsite",
@@ -38,7 +38,7 @@
     {
       "id": "3",
       "job_title": "Mobile App Developer",
-      "salary": "$70,000 - $90,000",
+      "salary": "70K - 90K",
       "company_name": "Amazon",
       "company_logo": "./assets/logos/amazon.jpeg",
       "remote_or_onsite": "Onsite",
@@ -56,7 +56,7 @@
        {
       "id": "4",
       "job_title": "Backend Developer",
-      "salary": "$90,000 - $110,000",
+      "salary": "90K - 110K",
       "company_name": "Oracle",
       "company_logo": "./assets/logos/Oracle.png",
       "remote_or_onsite": "Remote",
@@ -74,7 +74,7 @@
     {
       "id": "5",
       "job_title": "Netflix",
-      "salary": "$100,000 - $120,000",
+      "salary": "100K - 120K",
       "company_name": "Nimbus Computing",
       "company_logo": "./assets/logos/netflix-4 1.png",
       "remote_or_onsite": "Onsite",
@@ -92,7 +92,7 @@
     {
       "id": "6",
       "job_title": "UI/UX Designer",
-      "salary": "$80,000 - $100,000",
+      "salary": "80K - 100K",
       "company_name": "Tesla",
       "company_logo": "./assets/logos/tesla-9 1.png",
       "remote_or_onsite": "Onsite",
