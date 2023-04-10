@@ -7,17 +7,37 @@ import './LoadJobDetails.css';
 import Lottie from 'lottie-react';
 import heroImg from '../../../public/assets/78518-girl-doing-remote-job-using-laptop.json'
 import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
+import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 
 const LoadJobDetails = () => {
     const loaderSpinner = useNavigation()
     if(loaderSpinner.state === "loading"){
         return <LoaderSpinner></LoaderSpinner>
     }
-    const id = useParams();
-    const jobId = id.jobId;
+    const getId = useParams();
+    const jobId = getId.jobId;
     const data = useLoaderData();
     // console.log(data);
     const [findJob, setFindJob] = useState({});
+    const [storeJob, setStoreJob] = useState([]);
+
+    useEffect(()=>{
+        const storedJob = getShoppingCart();
+        const updatedJob = [];
+
+        for(const id in storedJob){
+            const applyJob = data.find(job => job.id === id);
+
+            if(applyJob){
+                const time = storeJob[id];
+
+                applyJob.time =time;
+
+                updatedJob.push(applyJob);
+            }
+        }
+        setStoreJob(updatedJob);
+    },[data])
 
 
     useEffect(() => {
@@ -25,9 +45,16 @@ const LoadJobDetails = () => {
         setFindJob(job);
 
     }, [])
-    console.log(findJob);
+    // console.log(findJob);
 
-    const { contact_information, educational_requirements, experiences, job_description, job_responsibility, job_title, location, salary } = findJob
+    const handleApply = (apply)=>{
+        const newApply = [...storeJob , apply];
+        setStoreJob(newApply);
+
+        addToDb(apply.id)
+    }
+
+    const { id,contact_information, educational_requirements, experiences, job_description, job_responsibility, job_title, location, salary} = findJob
 
 
     return (
@@ -114,7 +141,7 @@ const LoadJobDetails = () => {
                             </div>
                         </div>
 
-                        <button className='mt-3 lg:mt-5 bg-gradient-to-l from-primary to-secondary rounded-lg font-medium text-white w-full py-3'>Apply Now</button>
+                        <button className='mt-3 lg:mt-5 bg-gradient-to-l from-primary to-secondary rounded-lg font-medium text-white w-full py-3' onClick={()=>handleApply(findJob)}>Apply Now</button>
                     </div>
 
                 </div>

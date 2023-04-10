@@ -10,6 +10,9 @@ import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import LoadJobDetails from './components/LoadJobDetails/LoadJobDetails';
 import LoaderSpinner from './components/LoaderSpinner/LoaderSpinner';
+import Applied from './components/Footer/Appiled/Applied';
+import appiledJobLoader from './jobApplied/jobApplied';
+import AppliedJobDetails from './components/AppiledJobDetails/AppliedJobDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,10 +33,18 @@ const router = createBrowserRouter([
         element: <LoadJobDetails></LoadJobDetails>,
         loader: ()=> fetch('allJobs.json')
       },
-      // {
-      //   path: "blog",
-      //   element: <LoaderSpinner></LoaderSpinner>
-      // }
+      {
+        path: "applied",
+        element: <Applied></Applied>,
+        loader: appiledJobLoader
+      },
+      {
+        path: "appliedDetails/:jobId",
+        element: <AppliedJobDetails></AppliedJobDetails>,
+        loader: ()=> fetch('allJobs.json')
+
+      }
+
     ]
   },
 ]);
