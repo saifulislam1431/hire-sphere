@@ -10,7 +10,7 @@ const Footer = () => {
                         <img src="../../../public/assets/Icons/search.png" alt="" className='w-5 md:w-8' />
                         <h1 className='gradient-text text-xl md:text-2xl font-extrabold'>HireSphere</h1>
                     </div>
-                    <p className='text-base-100 text-base font-normal mt-5'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
+                    <p className='text-base-300 text-base font-normal mt-5'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
                     <div className='inline-flex gap-3 mt-5'>
                         <img src="../../../public/assets/Icons/facebook.png" alt="facebook" className='w-10' />
                         <img src="../../../public/assets/Icons/twitter.png" alt="twitter" className='w-10' />

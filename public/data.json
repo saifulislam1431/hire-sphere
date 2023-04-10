@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Assignment 01",
+    "id": 1,
+    "totalMarks": 60
+  },
+  {
+    "name": "Assignment 02",
+    "id": 2,
+    "totalMarks": 60
+  },
+  {
+    "name": "Assignment 03",
+    "id": 3,
+    "totalMarks": 60
+  },
+  {
+    "name": "Assignment 04",
+    "id": 4,
+    "totalMarks": 59
+  },
+  {
+    "name": "Assignment 05",
+    "id": 5,
+    "totalMarks": 60
+  },
+  {
+    "name": "Assignment 06",
+    "id": 6,
+    "totalMarks": 60
+  },
+  {
+    "name": "Assignment 07",
+    "id": 7,
+    "totalMarks": 60
+  },
+  {
+    "name": "Assignment 08",
+    "id": 8,
+    "totalMarks": 60
+  }
+]
