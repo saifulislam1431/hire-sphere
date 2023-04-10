@@ -14,6 +14,8 @@ const LoadAppliedJobs = ({ singleAppliedJob }) => {
     return (
         <div className='card-container flex   justify-center my-10'>
 
+            
+
             <div className='border border-gray-2 rounded-lg p-6 flex flex-col lg:flex-row items-center gap-8 w-full'>
                 <div>
                     <img src={company_logo} alt="" className='h-10 w-32' />

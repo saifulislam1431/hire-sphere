@@ -12,9 +12,11 @@ const Footer = () => {
                     </div>
                     <p className='text-base-300 text-base font-normal mt-5'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
                     <div className='inline-flex gap-3 mt-5'>
-                        <img src="../../../public/assets/Icons/facebook.png" alt="facebook" className='w-10' />
-                        <img src="../../../public/assets/Icons/twitter.png" alt="twitter" className='w-10' />
-                        <img src="../../../public/assets/Icons/instagram.png" alt="" className='w-10' />
+                        <img src="./assets/icons/facebook.png" alt="facebook" className='w-10' />
+                        <img src="./assets/icons/twitter.png
+                        " alt="twitter" className='w-10' />
+                        <img src="./assets/icons/instagram.png
+                        " alt="" className='w-10' />
                     </div>
                 </div>
 

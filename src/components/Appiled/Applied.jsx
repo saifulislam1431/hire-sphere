@@ -1,9 +1,9 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import done from '../../../newAssets/121018-done.json';
+import done from '../../newAssets/121018-done.json';
 import { useLoaderData, useNavigation } from 'react-router-dom';
-import LoadAppliedJobs from '../../LoadAppliedJobs/LoadAppliedJobs';
-import LoaderSpinner from '../../LoaderSpinner/LoaderSpinner';
+import LoadAppliedJobs from '../LoadAppliedJobs/LoadAppliedJobs';
+import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 
 
 const Applied = () => {

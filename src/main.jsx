@@ -10,13 +10,16 @@ import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import LoadJobDetails from './components/LoadJobDetails/LoadJobDetails';
 import LoaderSpinner from './components/LoaderSpinner/LoaderSpinner';
-import Applied from './components/Footer/Appiled/Applied';
+
 import appiledJobLoader from './jobApplied/jobApplied';
 import AppliedJobDetails from './components/AppiledJobDetails/AppliedJobDetails';
+import Applied from './components/Appiled/Applied';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -35,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "applied",
-        element: <Applied></Applied>,
+        element:<Applied></Applied>,
         loader: appiledJobLoader
       },
       {
