@@ -75,7 +75,7 @@ const Home = () => {
                         <p className='text-accent font-medium mb-6'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                     </div>
 
-                    <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-3 lg:gap-10 mt-5 lg:mt-10'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-3 lg:gap-10 my-5 lg:my-10'>
                         {
                             allJobs.slice(0,showAll ? 6 : 4).map(job=><SingleJob
                             key={job.id}
@@ -87,7 +87,7 @@ const Home = () => {
                     <div className='text-center'>
 
                         {
-                            !showAll && <button className='my-btn' onClick={showHandler}>Show All</button>
+                            !showAll && <button className='my-btn' onClick={showHandler}>See All Jobs</button>
                         }
 
                     </div>
