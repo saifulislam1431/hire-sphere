@@ -29,9 +29,9 @@ const Blog = () => {
                         <input type="checkbox" id="my-modal-1" className="modal-toggle" />
                         <div className="modal">
                             <div className="modal-box relative">
-                                <label htmlFor="my-modal-1" className="btn my-btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">When should you use context API?</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                                <label htmlFor="my-modal-1" className="btn btn-active btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                <h3 className="text-lg font-bold gradient-text">When should you use context API?</h3>
+                                <p className="py-4"><strong>Context API </strong> is mainly used for distribute data in many nested component. In general for data passing one component to another component we used <strong>Props</strong>. But when we have to pass data in many child or nested component there are we face some difficulties of reuse components, for avoiding this situation <strong>Context API </strong> is simpler solution.</p>
                             </div>
                         </div>
          </div>
@@ -43,9 +43,9 @@ const Blog = () => {
                         <input type="checkbox" id="my-modal-2" className="modal-toggle" />
                         <div className="modal">
                             <div className="modal-box relative">
-                                <label htmlFor="my-modal-2" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">What is a custom hook?</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                                <label htmlFor="my-modal-2" className="btn btn-active  btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                <h3 className="text-lg font-bold gradient-text">What is a custom hook?</h3>
+                                <p className="py-4"><strong>Custom hook</strong> is a JavaScript function name which is special function and use for to call other hooks. It is reusable. It is pass argument and return depends on what we need.</p>
                             </div>
                         </div>
          </div>
@@ -57,9 +57,9 @@ const Blog = () => {
                         <input type="checkbox" id="my-modal-3" className="modal-toggle" />
                         <div className="modal">
                             <div className="modal-box relative">
-                                <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">What is useRef?</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                                <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2 btn-active ">✕</label>
+                                <h3 className="text-lg font-bold gradient-text">What is useRef?</h3>
+                                <p className="py-4"><strong>useRef</strong> is a react build in hook which is return a reference by depends on argument value.</p>
                             </div>
                         </div>
          </div>
@@ -71,9 +71,9 @@ const Blog = () => {
                         <input type="checkbox" id="my-modal-4" className="modal-toggle" />
                         <div className="modal">
                             <div className="modal-box relative">
-                                <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">What is useMemo?</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                                <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2 btn-active ">✕</label>
+                                <h3 className="text-lg font-bold gradient-text">What is useMemo?</h3>
+                                <p className="py-4"><strong>useMemo</strong> is a react build in hook which is  memoizing or caching computed results for reoccurring usage. It is  optimize the performance application by caching outputs from computations.</p>
                             </div>
                         </div>
          </div>
