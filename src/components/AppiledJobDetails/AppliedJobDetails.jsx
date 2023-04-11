@@ -105,6 +105,7 @@ const AppliedJobDetails = () => {
                                     </span>
                                     <h1 className='font-bold'>Salary: <span className='text-accent font-semibold'>{salary} (per Month)</span></h1>
                                 </div>
+                                <br />
 
                                 <div className='mt-4 inline-flex gap-2'>
                                     <span className='text-primary'>
@@ -124,6 +125,7 @@ const AppliedJobDetails = () => {
                                     </span>
                                     <h1 className='font-bold'>Phone: <span className='text-accent font-semibold'>{contact_information?.phone}</span></h1>
                                 </div>
+                                <br />
 
                                 <div className='mt-4 inline-flex gap-2'>
                                     <span className='text-primary'>
@@ -131,6 +133,7 @@ const AppliedJobDetails = () => {
                                     </span>
                                     <h1 className='font-bold'>Email: <span className='text-accent font-semibold'>{contact_information?.email}</span></h1>
                                 </div>
+                                <br />
 
                                 <div className='mt-4 inline-flex gap-2 pb-3'>
                                     <span className='text-primary'>
