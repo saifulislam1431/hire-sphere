@@ -1,25 +1,25 @@
  [
     {
       "id":0,
-      "category_logo": "./assets/Icons/web-programming.png",
+      "category_logo": "./logos/web-programming.png",
       "category_name": "Web Development",
       "jobs_available": "108"
     },
     {
       "id":1,
-      "category_logo": "./assets/Icons/data-science.png",
+      "category_logo": "./logos/data-science.png",
       "category_name": "Data Science",
       "jobs_available": "175+"
     },
     {
       "id":2,
-      "category_logo": "./assets/Icons/engineering.png",
+      "category_logo": "./logos/engineering.png",
       "category_name": "Software Engineering",
       "jobs_available": "120+"
     },
     {
       "id":3,
-      "category_logo": "./assets/Icons/social-media-marketing.png",
+      "category_logo": "./logos/social-media-marketing.png",
       "category_name": "Digital Marketing",
       "jobs_available": "200"
     }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Lottie from 'lottie-react';
-import statistics from '../../../public/assets/99430-statistics.json'
+import statistics from '../../assets/99430-statistics.json';
+import start from '../../assets/Icons/star.png';
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
 import axios from 'axios';
 import { useNavigation } from 'react-router-dom';
@@ -20,6 +21,7 @@ const Statistics = () => {
 
     return (
         <main>
+            {/* Banner section start */}
             <section className="banner-section bg-primary bg-opacity-10">
                 <div className='my-container flex items-center flex-col'>
                     <div className='w-80'>
@@ -53,7 +55,7 @@ const Statistics = () => {
                     <div className='my-12 flex justify-center'>
                         <div className='inline-flex items-center gap-5 border-2  p-4 rounded-xl'>
                         <div>
-                            <img src="../../../public/assets/Icons/star.png" alt="" />
+                            <img src={start} alt="" />
                         </div>
                         <div>
                             <span className='font-extrabold text-xl'>59.88</span>

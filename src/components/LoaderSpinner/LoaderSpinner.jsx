@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import loader from '../../../public/assets/9833-full-page-loading-spinner.json'
+import loader from '../../assets/9833-full-page-loading-spinner.json'
 
 const LoaderSpinner = () => {
     return (

@@ -1,4 +1,8 @@
 import React from 'react';
+import facebook from '../../assets/Icons/facebook.png';
+import twitter from '../../assets/Icons/twitter.png';
+import instagram from '../../assets/Icons/instagram.png';
+import logo from '../../assets/Icons/search.png'
 
 const Footer = () => {
     return (
@@ -7,16 +11,14 @@ const Footer = () => {
 
                 <div>
                     <div className='logo-container inline-flex gap-2'>
-                        <img src="../../../public/assets/Icons/search.png" alt="" className='w-5 md:w-8' />
+                        <img src={logo} alt="" className='w-5 md:w-8' />
                         <h1 className='gradient-text text-xl md:text-2xl font-extrabold'>HireSphere</h1>
                     </div>
                     <p className='text-base-300 text-base font-normal mt-5'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
                     <div className='inline-flex gap-3 mt-5'>
-                        <img src="./assets/icons/facebook.png" alt="facebook" className='w-10' />
-                        <img src="./assets/icons/twitter.png
-                        " alt="twitter" className='w-10' />
-                        <img src="./assets/icons/instagram.png
-                        " alt="" className='w-10' />
+                        <img src={facebook} alt="facebook" className='w-8' />
+                        <img src={twitter} alt="twitter" className='w-8' />
+                        <img src={instagram} alt="" className='w-8' />
                     </div>
                 </div>
 

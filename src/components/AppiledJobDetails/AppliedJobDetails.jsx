@@ -5,7 +5,7 @@ import { faLocation, faDollarSign, faPhone, faEnvelope, faBriefcase } from '@for
 import './AppliedJobDetails.css';
 
 import Lottie from 'lottie-react';
-import heroImg from '../../../public/assets/78518-girl-doing-remote-job-using-laptop.json'
+import heroImg from '../../assets/78518-girl-doing-remote-job-using-laptop.json'
 import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 

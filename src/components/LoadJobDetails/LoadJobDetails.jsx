@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useNavigation, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useNavigation, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation, faDollarSign, faPhone, faEnvelope, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import './LoadJobDetails.css';
 
 import Lottie from 'lottie-react';
-import heroImg from '../../../public/assets/78518-girl-doing-remote-job-using-laptop.json'
+import heroImg from '../../assets/78518-girl-doing-remote-job-using-laptop.json'
 import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 
@@ -141,7 +141,9 @@ const LoadJobDetails = () => {
                             </div>
                         </div>
 
+                       
                         <button className='mt-3 lg:mt-5 bg-gradient-to-l from-primary to-secondary rounded-lg font-medium text-white w-full py-3' onClick={()=>handleApply(findJob)}>Apply Now</button>
+                       
                     </div>
 
                 </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Lottie from 'lottie-react';
-import heroImage from '../../../public/assets/75702-job-proposal-review-animation.json';
+import heroImage from '../../assets/75702-job-proposal-review-animation.json';
 import { data } from 'autoprefixer';
 import SingleCategory from '../SingleCategory/SingleCategory';
 import { useLoaderData, useNavigation } from 'react-router-dom';
@@ -25,7 +25,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetch('categories.json')
+        fetch('/categories.json')
             .then(res => res.json())
             .then(data => setCategory(data))
     }, [])

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
-
+import logo from '../../assets/Icons/search.png'
 const Header = () => {
     const [isOpen, setOpen] = useState(false);
     return (
@@ -9,7 +9,7 @@ const Header = () => {
             <div className='flex justify-between items-center'>
                 <div>
                     <div className='logo-container inline-flex gap-2'>
-                        <img src="./assets/icons/search.png" alt="" className='w-8 md:w-12' />
+                        <img src={logo} alt="" className='w-8 md:w-12' />
                         <h1 className='gradient-text text-2xl md:text-4xl font-extrabold'>HireSphere</h1>
                     </div>
                 </div>

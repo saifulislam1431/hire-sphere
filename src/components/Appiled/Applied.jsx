@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Lottie from 'lottie-react';
-import done from '../../newAssets/121018-done.json';
+import done from '../../assets/121018-done.json';
 import { useLoaderData, useNavigation } from 'react-router-dom';
 import LoadAppliedJobs from '../LoadAppliedJobs/LoadAppliedJobs';
 import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
@@ -8,11 +8,37 @@ import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 
 const Applied = () => {
     const loaderSpinner = useNavigation()
-    if(loaderSpinner.state === "loading"){
+    if (loaderSpinner.state === "loading") {
         return <LoaderSpinner></LoaderSpinner>
     }
     const jobs = useLoaderData();
     // console.log(jobs);
+    const [filteredJobs, setFilteredJobs] = useState([]);
+
+    const [value, setValue] = useState(" ");
+
+    useEffect(() => {
+      
+        if (value === " ") {
+            setFilteredJobs(jobs)
+        }
+        else {
+            const filtered = jobs.filter(fj => fj.remote_or_onsite === value);
+            setFilteredJobs(filtered);
+        }
+    }, [jobs,value])
+
+  
+    const handleRemote = () => {
+        setValue("Remote");
+    }
+    const handleOnsite = () => {
+        setValue("Onsite");
+    }
+    console.log(value);
+    console.log(filteredJobs);
+
+
     return (
         <main>
             {/* Banner section Start */}
@@ -32,15 +58,25 @@ const Applied = () => {
                 <div>
                     <div className='my-container my-5 lg:my-10'>
 
-                        <div>
-
+                        <div className='flex justify-end'>
+                            {/* <div>
+                            <button className='btn-active'>Remote</button>
+                            <button className='btn-active'>On-Site</button>
+                            </div> */}
+                            <div className="dropdown dropdown-hover">
+                                <label tabIndex={0} className="btn my-btn m-1">Default</label>
+                                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                                    <li><a className='gradient-text font-semibold' onClick={() => handleRemote()}>Remote</a></li>
+                                    <li><a className='gradient-text font-semibold' onClick={() => handleOnsite()}>On-Site</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div>
                             {
-                       jobs.map(singleAppliedJob=><LoadAppliedJobs
-                       key={singleAppliedJob.id}
-                       singleAppliedJob={singleAppliedJob}
-                       ></LoadAppliedJobs>)
+                                filteredJobs.map(singleAppliedJob => <LoadAppliedJobs
+                                    key={singleAppliedJob.id}
+                                    singleAppliedJob={singleAppliedJob}
+                                ></LoadAppliedJobs>)
                             }
                         </div>
 
