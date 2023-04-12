@@ -8,6 +8,8 @@ import Lottie from 'lottie-react';
 import heroImg from '../../assets/78518-girl-doing-remote-job-using-laptop.json'
 import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoadJobDetails = () => {
     const loaderSpinner = useNavigation()
@@ -51,6 +53,16 @@ const LoadJobDetails = () => {
         const newApply = [...storeJob, apply];
         setStoreJob(newApply);
         addToDb(apply.id)
+        toast.success('Applied successfully.', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
     }
 
     const { id, contact_information, educational_requirements, experiences, job_description, job_responsibility, job_title, location, salary } = findJob

@@ -13,7 +13,7 @@ const Header = () => {
                         <h1 className='gradient-text text-2xl md:text-4xl font-extrabold'>HireSphere</h1>
                     </div>
                 </div>
-                <ul className={`nav-items flex flex-col lg:flex-row justify-end items-center absolute duration-300 bg-primary bg-opacity-40 lg:bg-transparent py-10 lg:py-0 z-40 lg:static w-full ${isOpen ? 'top-20 right-0 ' : '-top-96 right-0'}`}>
+                <ul className={`nav-items flex flex-col lg:flex-row justify-end items-center absolute duration-300 bg-gray-800 bg-opacity-75 lg:bg-transparent py-10 lg:py-0 z-40 lg:static w-full ${isOpen ? 'top-20 right-0 ' : '-top-96 right-0'}`}>
 
                     <li className='mr-5 mb-3 lg:mb-0'>
                         <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'default'}>Home</NavLink>

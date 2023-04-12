@@ -23,7 +23,7 @@
 }
 
 .default{
-    @apply text-accent font-semibold
+    @apply text-base-100 lg:text-accent  font-semibold
 }
 
 .my-btn{
