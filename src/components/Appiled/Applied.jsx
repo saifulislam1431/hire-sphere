@@ -4,6 +4,8 @@ import done from '../../assets/121018-done.json';
 import { useLoaderData, useNavigation } from 'react-router-dom';
 import LoadAppliedJobs from '../LoadAppliedJobs/LoadAppliedJobs';
 import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter} from '@fortawesome/free-solid-svg-icons';
 
 
 const Applied = () => {
@@ -64,7 +66,7 @@ const Applied = () => {
                             <button className='btn-active'>On-Site</button>
                             </div> */}
                             <div className="dropdown dropdown-hover">
-                                <label tabIndex={0} className="btn my-btn m-1">Default</label>
+                                <label tabIndex={0} className=" font-semibold items-center my-btn m-1 inline-flex gap-2 "><FontAwesomeIcon icon={faFilter} /> <span>Filter by:</span></label>
                                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a className='gradient-text font-semibold' onClick={() => handleRemote()}>Remote</a></li>
                                     <li><a className='gradient-text font-semibold' onClick={() => handleOnsite()}>On-Site</a></li>

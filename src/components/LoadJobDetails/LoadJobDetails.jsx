@@ -11,7 +11,7 @@ import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 
 const LoadJobDetails = () => {
     const loaderSpinner = useNavigation()
-    if(loaderSpinner.state === "loading"){
+    if (loaderSpinner.state === "loading") {
         return <LoaderSpinner></LoaderSpinner>
     }
     const getId = useParams();
@@ -21,23 +21,23 @@ const LoadJobDetails = () => {
     const [findJob, setFindJob] = useState({});
     const [storeJob, setStoreJob] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         const storedJob = getShoppingCart();
         const updatedJob = [];
 
-        for(const id in storedJob){
+        for (const id in storedJob) {
             const applyJob = data.find(job => job.id === id);
 
-            if(applyJob){
+            if (applyJob) {
                 const time = storeJob[id];
 
-                applyJob.time =time;
+                applyJob.time = time;
 
                 updatedJob.push(applyJob);
             }
         }
         setStoreJob(updatedJob);
-    },[data])
+    }, [data])
 
 
     useEffect(() => {
@@ -47,14 +47,13 @@ const LoadJobDetails = () => {
     }, [])
     // console.log(findJob);
 
-    const handleApply = (apply)=>{
-        const newApply = [...storeJob , apply];
+    const handleApply = (apply) => {
+        const newApply = [...storeJob, apply];
         setStoreJob(newApply);
-
         addToDb(apply.id)
     }
 
-    const { id,contact_information, educational_requirements, experiences, job_description, job_responsibility, job_title, location, salary} = findJob
+    const { id, contact_information, educational_requirements, experiences, job_description, job_responsibility, job_title, location, salary } = findJob
 
 
     return (
@@ -105,7 +104,7 @@ const LoadJobDetails = () => {
                                     </span>
                                     <h1 className='font-bold'>Salary: <span className='text-accent font-semibold'>{salary} (per Month)</span></h1>
                                 </div>
-<br />
+                                <br />
                                 <div className='mt-4 inline-flex gap-2'>
                                     <span className='text-primary'>
                                         <FontAwesomeIcon icon={faBriefcase} />
@@ -144,9 +143,9 @@ const LoadJobDetails = () => {
                             </div>
                         </div>
 
-                       
-                        <button className='mt-3 lg:mt-5 bg-gradient-to-l from-primary to-secondary rounded-lg font-medium text-white w-full py-3' onClick={()=>handleApply(findJob)}>Apply Now</button>
-                       
+
+                        <button className='mt-3 lg:mt-5 bg-gradient-to-l from-primary to-secondary rounded-lg font-medium text-white w-full py-3' onClick={() => handleApply(findJob)}>Apply Now</button>
+
                     </div>
 
                 </div>
