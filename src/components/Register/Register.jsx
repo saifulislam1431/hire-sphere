@@ -81,7 +81,7 @@ const Register = () => {
                     <input type="email" name='email' placeholder="Enter email" className='py-2 px-4 w-full lg:w-96 rounded-md placeholder:text-xs placeholder:tracking-wide bg-accent bg-opacity-10 focus:bg-opacity-30 outline-none' required />
 
                     <label className='text-neutral text-lg mt-2 mb-1'>Photo:</label>
-                    <input type="url" name='photo' placeholder="Enter email" className='py-2 px-4 w-full lg:w-96 rounded-md placeholder:text-xs placeholder:tracking-wide bg-accent bg-opacity-10 focus:bg-opacity-30 outline-none' required />
+                    <input type="url" name='photo' placeholder="Enter photo Url" className='py-2 px-4 w-full lg:w-96 rounded-md placeholder:text-xs placeholder:tracking-wide bg-accent bg-opacity-10 focus:bg-opacity-30 outline-none' required />
 
                     <label className='text-neutral text-lg mt-3 mb-1'>Password:</label>
                     <div className='inline-flex items-center'>
