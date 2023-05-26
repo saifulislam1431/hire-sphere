@@ -5,7 +5,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://melodious-lebkuchen-a67edd.netlify.app/">
+    <a href="https://hire-sphere.web.app/">
       Demo
     </a>
   </h3>
@@ -26,7 +26,7 @@
 ## Overview
 
 - Where can I see your demo?
-  --> If want to see demo then please follow this url(https://melodious-lebkuchen-a67edd.netlify.app/)
+  --> If want to see demo then please follow this url(https://hire-sphere.web.app/)
 
 ### Built With
 
